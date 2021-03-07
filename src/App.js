@@ -1,8 +1,8 @@
-import { Switch } from "@material-ui/core";
 import React from "react";
 import "./App.css";
 import WebcamCapture from "./components/webcam/WebcamCapture";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Preview from "./components/Preview/Preview";
 
 function App() {
   return (
