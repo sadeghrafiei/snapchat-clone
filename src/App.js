@@ -1,12 +1,24 @@
-import React from 'react';
-import './App.css';
-import WebcamCapture from './components/webcam/WebcamCapture';
+import { Switch } from "@material-ui/core";
+import React from "react";
+import "./App.css";
+import WebcamCapture from "./components/webcam/WebcamCapture";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>LETS BUILD SNAPCHAT</h1>
-      <WebcamCapture />
+    <div className="app">
+      <Router>
+        <div className="app__body">
+          <Switch>
+          <Route path="/preview">
+              <Preview />
+            </Route>
+            <Route exact path="/">
+              <WebcamCapture />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
